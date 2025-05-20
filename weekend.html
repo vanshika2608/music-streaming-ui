@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Weeknd</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">The Weeknd</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae" alt="The Weeknd" class="artist-image">
+      <div class="artist-details">
+        <h1>The Weeknd</h1>
+        <p>109,876,543 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" alt="Blinding Lights">
+            <div>
+              <h3>Blinding Lights</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">3:20</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://cdn-images.dzcdn.net/images/cover/fd00ebd6d30d7253f813dba3bb1c66a9/1900x1900-000000-80-0-0.jpg" alt="Save Your Tears">
+            <div>
+              <h3>Save Your Tears</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">3:35</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://preview.redd.it/starboy-album-cover-colourised-v0-63bfaan13gd81.jpg?auto=webp&s=11a815f8c78324665fbbf15281e485b191dc3305" alt="Starboy">
+            <div>
+              <h3>Starboy (feat. Daft Punk)</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">3:50</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 50 songs by The Weeknd</p>
+    </div>
+  </div>
+</body>
+</html>

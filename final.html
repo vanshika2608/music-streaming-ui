@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Artists Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            color: #30a319;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .artist-pill {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 0 10px;
+        }
+
+        .artist-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .artist-image-container {
+            width: 60%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .artist-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .artist-image:hover {
+            transform: scale(1.07);
+        }
+
+        .artist-name {
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .artist-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<body>
+    <div class="header">
+        <div class="header-left">
+            <button class="back-button">←</button>
+            <div class="artist-pill">Your Artists</div>
+        </div>
+        <div class="header-right">
+            <button class="icon-button"></button>
+            <button class="icon-button"></button>
+        </div>
+    </div>
+
+    <div class="artist-grid">
+        <div class="artist-card" onclick="navigateToArtistPage('the-weeknd')">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae" alt="The Weeknd" class="artist-image">
+            </div>
+            <div class="artist-name">The Weeknd</div>
+        </div>
+        <div class="artist-card" onclick="navigateToArtistPage('kanye-west')">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab67616d0000b273fd61ea11e50ba0b7eade9466" alt="Kanye West" class="artist-image">
+            </div>
+            <div class="artist-name">Kanye West</div>
+        </div>
+        <div class="artist-card" onclick="navigateToArtistPage('ed-sheeran')">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb784daff754ecfe0464ddbeb9" alt="Ed Sheeran" class="artist-image">
+            </div>
+            <div class="artist-name">Ed Sheeran</div>
+        </div>
+        <div class="artist-card" onclick="navigateToArtistPage('seedhe-maut')">
+            <div class="artist-image-container">
+                <img src="https://theindianmusicdiaries.com/wp-content/smush-webp/2024/08/seedhe-maut-photoshoot-2023-shot-by-kyabc-43-scaled-1-scaled.jpg.webp" alt="Seedhe" class="artist-image">
+            </div>
+            <div class="artist-name">Seedhe Maut</div>
+        </div>
+        <div class="artist-card" onclick="navigateToArtistPage('dua-lipa')">
+            <div class="artist-image-container">
+                <img src="https://people.com/thmb/Ww-wS--Jmc2U2xvF9GaGjS2LB3s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(683x137:685x139)/dua-lipa-110923-1-75f385716fc941b491072d4403b73cc3.jpg" alt="Dua Lipa" class="artist-image">
+            </div>
+            <div class="artist-name">Dua Lipa</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb7aa689cd7ca136098b26c20d" alt="Sam Smith" class="artist-image">
+            </div>
+            <div class="artist-name">Karan Aujla</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9" alt="Ariana Grande" class="artist-image">
+            </div>
+            <div class="artist-name">Drake</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9" alt="The Weeknd" class="artist-image">
+            </div>
+            <div class="artist-name">Diljit dosanjh</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebc9ac92d87de28795c1c49730" alt="Billie Eilish" class="artist-image">
+            </div>
+            <div class="artist-name">Kishore Kumar</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebe03a98785f3658f0b6461ec4" alt="Ariana Grande" class="artist-image">
+            </div>
+            <div class="artist-name">Olivia Rodrigo</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eba0199b159c0c5a9f62333d32" alt="The Weeknd" class="artist-image">
+            </div>
+            <div class="artist-name">Lata Mangeshkar</div>
+        </div>
+        <div class="artist-card">
+            <div class="artist-image-container">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb371632043a8c12bb7eeeaf9d" alt="Billie Eilish" class="artist-image">
+            </div>
+            <div class="artist-name">Hanz Zimmer</div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        function navigateToArtistPage(artistName)
+        { 
+        if (artistName.toLowerCase() === 'dua-lipa') {
+            window.location.href = 'dualipa.html';}
+        else if (artistName.toLowerCase() === 'the-weeknd') {
+            window.location.href = 'weekend.html';}
+        else if (artistName.toLowerCase() === 'kanye-west') {
+            window.location.href = 'kaneywest.html';}
+        else if (artistName.toLowerCase() === 'ed-sheeran') {
+            window.location.href = 'edshern.html';}
+        else if (artistName.toLowerCase() === 'seedhe-maut') {
+            window.location.href = 'seedhe maut.html';
+          }
+        }
+      </script>
+</body>
+</html>

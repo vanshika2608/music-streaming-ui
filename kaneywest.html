@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanye West</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">Kanye West</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab67616d0000b273fd61ea11e50ba0b7eade9466" alt="Kanye West" class="artist-image">
+      <div class="artist-details">
+        <h1>Kanye West</h1>
+        <p>80,123,456 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b2739bbd79106e510d13a9a5ec33" alt="Stronger">
+            <div>
+              <h3>Stronger</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">5:11</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://cdn-images.dzcdn.net/images/cover/2877c6bf4fad750c54dd212fb50a366b/1900x1900-000000-80-0-0.jpg" alt="Heartless">
+            <div>
+              <h3>Heartless</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">3:31</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b2739bbd79106e510d13a9a5ec33" alt="Flashing Lights">
+            <div>
+              <h3>Flashing Lights</h3>
+              <p>Music video</p>
+            </div>
+          </div>
+          <div class="song-duration">3:57</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 45 songs by Kanye West</p>
+    </div>
+  </div>
+</body>
+</html>
